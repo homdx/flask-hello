@@ -156,12 +156,13 @@ exec -- ${CMD[@]}' > /tmp/launch.sh
 #ADD localbinary.tar.gz /
 #ADD root-gradle.tar.gz /root
 
-ARG DOT_VERSION=0.0.1
+ARG DOT_VERSION=0.0.3
 ARG DOT_PATH=https://github.com/homdx/flask-hello/releases/download
-ARG DOT_HASH1=262d62882c65d32b35833aa36d6757aac97012658da75ac7bac685f205b8921a
-ARG DOT_FILE1=localbinary.tar.gz
+ARG DOT_HASH1=fd7689afaa3c5497e170e8276892f70fc0f41b03f2f320bcc62600d6de66399b
+ARG DOT_FILE1=local-bin.tar.gz
 ARG DOT_HASH2=d379db573dab27d0adaa49575a52705855bd456672ed59b813b2c50bdae891d4
 ARG DOT_FILE2=root-gradle.tar.gz
+#Fix https://github.com/kivy/python-for-android/issues/1749
 
 ARG DISABLECACHE=${DISABLE_CACHE}
 
