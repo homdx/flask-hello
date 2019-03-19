@@ -11,3 +11,11 @@ Hello World Kivy with included Flask application Docker builder:
 - NDKAPI=21
 - ANDROIDAPI=28
 - NDKVER=17c
+
+For make cache:
+```
+cd /root && time tar -czvf root-gradle.tar.gz .gradle/
+cd / && time -p tar -czf local-bin.tar.gz /home/userhome/.local/
+```
+Build without cache:
+`docker build -t flask-hello --build-arg DISABLECACHE=something .`
